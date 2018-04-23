@@ -86,7 +86,7 @@ namespace MineSweeper
 			// fisher-yates shuffle
 			var random = new Random();
 			var totalCells = _grid.Rows * _grid.Columns;
-			for (int i = 0; i < totalCells - 1; i++)
+			for (int i = 0; i < totalCells; i++)
 			{
 				var randomIndex = random.Next(i, totalCells);
 				var cellFromBack = _grid.Get(GetRow(randomIndex), GetColumn(randomIndex)) ?? new MineSweeperSafeCell();
